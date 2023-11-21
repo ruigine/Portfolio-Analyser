@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat&display=swap');
+
+* {
+    font-family: inter, sans-serif;
+}
+
+/* the white card in every page */
+.white-card {
+    @apply
+    bg-white
+    rounded-md
+    p-8
+}
+
+/* grey input classes */
+input[type="text"].input-grey, textarea.input-grey, input[type="number"].input-grey, input[type="month"].input-grey {
+    @apply
+    bg-gray-200
+    rounded-xl
+    border-2
+    border-navy-950
+    p-3
+    text-navy-950
+    placeholder:text-navy-800
+
+}
+
+.input-grey.invalid {
+    @apply
+    focus:outline-red-600 !important;
+    @apply
+    placeholder:text-red-600 !important;
+    @apply
+    border-red-600 !important
+}
+
+/* form labels */
+.form-label {
+    @apply
+    text-navy-950
+    mb-2
+    font-bold
+}
+
+.form-label.required {
+    @apply
+    after:content-['*']
+    after:text-red-500
+}
+
+/* form validation */
+.form-invalid {
+    @apply
+    text-sm
+    text-red-500
+    mt-2
+}
+
+/* navy button */
+.btn-navy {
+    @apply
+    bg-navy-950
+    text-white
+    font-bold
+    p-3
+    rounded-xl
+    text-center
+    hover:bg-navy-800
+}
+
+.btn-navy-dense {
+    @apply
+    bg-navy-950
+    text-white
+    font-bold
+    px-3
+    py-2
+    rounded-xl
+    text-center
+    hover:bg-navy-800
+}
+
+/* white buttons */
+.btn-outline-white {
+    @apply
+    border-[1px]
+    border-white
+    text-white
+    px-10
+    py-4
+    rounded-lg
+    text-center
+    hover:bg-gray-300
+    hover:text-navy-950
+}
+
+.btn-white {
+    @apply
+    bg-white
+    px-3
+    py-2
+    rounded-xl
+    text-center
+    disabled:text-gray-400
+}
+.btn-white:not(:disabled):hover {
+    @apply
+    bg-gray-100
+}
+
+/* grey button */
+.btn-grey {
+    @apply
+    bg-gray-400
+    text-white
+    font-bold
+    p-3
+    rounded-xl
+    text-center
+    hover:bg-[#b3bbc9]
+}
